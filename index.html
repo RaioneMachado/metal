@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30 Músicas Metal Inspiradoras - Partituras + Playbacks</title>
+    <title>Arranjos para Metais - Partituras para Sax, Trompete e Trombone</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Orbitron:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
@@ -15,16 +15,17 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="imagens/logo-metal.png" alt="30 Músicas Metal">
+                <img src="imagens/logo-metal.png" alt="Arranjos para Metais">
             </div>
             <div class="header-content">
-                <h1>AS MÚSICAS MAIS PESADAS E INSPIRADORAS</h1>
-                <p>30 Partituras + Playbacks para dominar o palco</p>
+                <h1>DOS LOUVORES MAIS TOCADOS</h1>
+                <p>Arranjos Profissionais para Naipe de Metais</p>
                 <div class="countdown">
                     <p>Oferta especial por tempo limitado:</p>
                     <div id="countdown-timer">
                         <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
                     </div>
+                    <p id="remaining-copies">17 cópias restantes</p>
                 </div>
             </div>
         </div>
@@ -43,25 +44,25 @@
         <div class="container">
             <div class="hero-content-wrapper">
                 <div class="hero-image">
-                    <img src="imagens/capa-metal.png" alt="Músicas Metal - Partituras">
+                    <img src="imagens/capa-metal.png" alt="Arranjos para Metais">
                     <!-- Selo de garantia -->
                     <div class="guarantee-badge">
-                        <i class="fas fa-skull"></i>
+                        <i class="fas fa-shield-alt"></i>
                         <span>Garantia de 7 dias</span>
                     </div>
                 </div>
                 
                 <div class="hero-text">
-                    <h2><span class="highlight-text">DOMINE O PALCO</span> com as músicas mais pesadas</h2>
+                    <h2><span class="highlight-text">DOMINE O PALCO</span> com os arranjos mais profissionais</h2>
                     
                     <!-- Lista de benefícios com ícones personalizados -->
                     <ul class="features-list">
                         <li>
                             <div class="feature-icon">
-                                <i class="fas fa-guitar"></i>
+                                <i class="fas fa-music"></i>
                             </div>
                             <div class="feature-text">
-                                <strong>30 músicas metal inspiradoras</strong> selecionadas para destruir
+                                <strong>Arranjos profissionais</strong> dos louvores mais tocados
                             </div>
                         </li>
                         <li>
@@ -69,15 +70,15 @@
                                 <i class="fas fa-file-pdf"></i>
                             </div>
                             <div class="feature-text">
-                                <strong>Partituras em PDF</strong> de alta qualidade para imprimir ou visualizar
+                                <strong>Partituras em PDF</strong> para cada instrumento + grade geral
                             </div>
                         </li>
                         <li>
                             <div class="feature-icon">
-                                <i class="fas fa-play-circle"></i>
+                                <i class="fas fa-file-alt"></i>
                             </div>
                             <div class="feature-text">
-                                <strong>Playbacks em MP3</strong> para você praticar até a exaustão
+                                <strong>Arquivos Sibelius e XML</strong> para edição no Musescore, Finale, etc
                             </div>
                         </li>
                         <li>
@@ -85,21 +86,39 @@
                                 <i class="fas fa-star"></i>
                             </div>
                             <div class="feature-text">
-                                <strong>Bônus exclusivo:</strong> Ebook "Técnicas Avançadas para Metal" (valor R$47,00)
+                                <strong>Bônus exclusivo:</strong> Videoaulas de técnicas para metais
                             </div>
                         </li>
                     </ul>
                     
-                    <!-- Botão principal com destaque -->
-                    <div class="hero-cta">
-                        <a href="#instruments" class="btn-hero">
-                            <span>QUERO MINHAS PARTITURAS AGORA</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <div class="secure-checkout">
-                            <i class="fas fa-lock"></i>
-                            <span>Compra 100% segura</span>
+                    <!-- Botões de escolha principal -->
+                    <div class="package-options">
+                        <div class="package-option">
+                            <h3>30 ARRANJOS</h3>
+                            <div class="price-comparison">
+                                <span class="old-price">De: R$2.100,00</span>
+                                <span class="new-price">Por: R$259,90</span>
+                            </div>
+                            <a href="#30-arranjos" class="btn-package">ESCOLHER</a>
                         </div>
+                        
+                        <div class="or-divider">
+                            <span>OU</span>
+                        </div>
+                        
+                        <div class="package-option">
+                            <h3>50 ARRANJOS</h3>
+                            <div class="price-comparison">
+                                <span class="old-price">De: R$3.500,00</span>
+                                <span class="new-price">Por: R$359,90</span>
+                            </div>
+                            <a href="#50-arranjos" class="btn-package">ESCOLHER</a>
+                        </div>
+                    </div>
+                    
+                    <div class="secure-checkout">
+                        <i class="fas fa-lock"></i>
+                        <span>Compra 100% segura</span>
                     </div>
                 </div>
             </div>
@@ -110,83 +129,98 @@
     <section id="instruments" class="instruments-section">
         <div class="container">
             <h2>ESCOLHA SEU INSTRUMENTO</h2>
-            <p class="section-subtitle">Partituras + Playbacks por apenas R$39,90</p>
+            <p class="section-subtitle">Partituras individuais por metade do preço</p>
             
             <div class="instruments-grid">
-                <!-- Guitarra -->
-                <div class="instrument-card" data-instrument="guitarra">
+                <!-- Sax Alto -->
+                <div class="instrument-card" data-instrument="sax-alto">
                     <div class="instrument-image">
-                        <img src="imagens/guitarra.png" alt="Guitarra">
+                        <img src="imagens/sax-alto.png" alt="Sax Alto">
                     </div>
-                    <h3>GUITARRA</h3>
+                    <h3>SAX ALTO</h3>
                     <p class="instrument-description">
-                        partituras + playbacks de 30 músicas
-                        <img src="imagens/mp3-metal.png" alt="" class="inline-icon">
+                        partituras em PDF
                         <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                     </p>
                     <div class="price-container">
-                        <span class="old-price">R$69,90</span>
-                        <span class="new-price">R$39,90</span>
+                        <span class="old-price">R$129,90</span>
+                        <span class="new-price">R$64,90</span>
                     </div>
                     <a href="https://pay.kiwify.com.br/8uUlSA5" target="_blank">
                         <button class="btn-buy">COMPRAR AGORA</button>
                     </a>
                 </div>
 
-                <!-- Baixo -->
-                <div class="instrument-card" data-instrument="baixo">
+                <!-- Sax Tenor -->
+                <div class="instrument-card" data-instrument="sax-tenor">
                     <div class="instrument-image">
-                        <img src="imagens/baixo.png" alt="Baixo">
+                        <img src="imagens/sax-tenor.png" alt="Sax Tenor">
                     </div>
-                    <h3>BAIXO</h3>
+                    <h3>SAX TENOR</h3>
                     <p class="instrument-description">
-                        partituras + playbacks de 30 músicas
-                        <img src="imagens/mp3-metal.png" alt="nota musical" class="inline-icon">
-                        <img src="imagens/pdf-metal.png" alt="partitura" class="inline-icon">
+                        partituras em PDF
+                        <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                     </p>
                     <div class="price-container">
-                        <span class="old-price">R$69,90</span>
-                        <span class="new-price">R$39,90</span>
+                        <span class="old-price">R$129,90</span>
+                        <span class="new-price">R$64,90</span>
                     </div>
                     <a href="https://pay.kiwify.com.br/zstqory" target="_blank">
                         <button class="btn-buy">COMPRAR AGORA</button>
                     </a>
                 </div>
 
-                <!-- Bateria -->
-                <div class="instrument-card" data-instrument="bateria">
+                <!-- Trompete -->
+                <div class="instrument-card" data-instrument="trompete">
                     <div class="instrument-image">
-                        <img src="imagens/bateria.png" alt="Bateria">
+                        <img src="imagens/trompete.png" alt="Trompete">
                     </div>
-                    <h3>BATERIA</h3>
+                    <h3>TROMPETE</h3>
                     <p class="instrument-description">
-                        partituras + playbacks de 30 músicas
-                        <img src="imagens/mp3-metal.png" alt="nota musical" class="inline-icon">
-                        <img src="imagens/pdf-metal.png" alt="partitura" class="inline-icon">
+                        partituras em PDF
+                        <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                     </p>
                     <div class="price-container">
-                        <span class="old-price">R$69,90</span>
-                        <span class="new-price">R$39,90</span>
+                        <span class="old-price">R$129,90</span>
+                        <span class="new-price">R$64,90</span>
                     </div>
                     <a href="https://pay.kiwify.com.br/Culig2h" target="_blank">
                         <button class="btn-buy">COMPRAR AGORA</button>
                     </a>
                 </div>
 
-                <!-- Teclado -->
-                <div class="instrument-card" data-instrument="teclado">
+                <!-- Trombone -->
+                <div class="instrument-card" data-instrument="trombone">
                     <div class="instrument-image">
-                        <img src="imagens/teclado.png" alt="Teclado">
+                        <img src="imagens/trombone.png" alt="Trombone">
                     </div>
-                    <h3>TECLADO</h3>
+                    <h3>TROMBONE</h3>
                     <p class="instrument-description">
-                        partituras + playbacks de 30 músicas
-                        <img src="imagens/mp3-metal.png" alt="nota musical" class="inline-icon">
-                        <img src="imagens/pdf-metal.png" alt="partitura" class="inline-icon">
+                        partituras em PDF
+                        <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                     </p>
                     <div class="price-container">
-                        <span class="old-price">R$69,90</span>
-                        <span class="new-price">R$39,90</span>
+                        <span class="old-price">R$129,90</span>
+                        <span class="new-price">R$64,90</span>
+                    </div>
+                    <a href="https://pay.kiwify.com.br/LXMGVus" target="_blank">
+                        <button class="btn-buy">COMPRAR AGORA</button>
+                    </a>
+                </div>
+
+                <!-- Melodia e Cifra -->
+                <div class="instrument-card" data-instrument="melodia">
+                    <div class="instrument-image">
+                        <img src="imagens/partitura.png" alt="Melodia e Cifra">
+                    </div>
+                    <h3>MELODIA & CIFRA</h3>
+                    <p class="instrument-description">
+                        para Violão, Guitarra, Piano e Baixo
+                        <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
+                    </p>
+                    <div class="price-container">
+                        <span class="old-price">R$129,90</span>
+                        <span class="new-price">R$64,90</span>
                     </div>
                     <a href="https://pay.kiwify.com.br/LXMGVus" target="_blank">
                         <button class="btn-buy">COMPRAR AGORA</button>
@@ -196,33 +230,34 @@
         </div>
     </section>
 
-    <!-- Featured Combo -->
-    <section class="featured-combo">
+    <!-- 30 Arranjos Section -->
+    <section id="30-arranjos" class="featured-combo">
         <div class="container">
-            <h2>PROMOÇÃO DO INFERNO</h2>
-            <p class="featured-description">Guitarra, Baixo e Bateria</p>
+            <h2>30 ARRANJOS COMPLETOS</h2>
+            <p class="featured-description">Tudo o que você precisa para seu naipe de metais</p>
             
             <div class="featured-instrument">
-                <img src="imagens/combo-metal.png" alt="Guitarra, Baixo e Bateria" class="featured-image">
+                <img src="imagens/30-arranjos.png" alt="30 Arranjos Completos" class="featured-image">
                 <div class="featured-info">
-                    <h3>PARTITURAS COMPLETAS PARA BANDA</h3>
+                    <h3>NAIPE DE METAIS COMPLETO</h3>
                     <ul class="combo-features">
-                        <li><i class="fas fa-check"></i> Todas as 30 músicas metal</li>
-                        <li><i class="fas fa-check"></i> Partituras em PDF para cada instrumento</li>
-                        <li><i class="fas fa-check"></i> Playbacks em MP3 para cada música</li>
-                        <li><i class="fas fa-check"></i> Bônus exclusivo para combo</li>
+                        <li><i class="fas fa-check"></i> 30 arranjos profissionais dos louvores mais tocados</li>
+                        <li><i class="fas fa-check"></i> Partes individuais em PDF para Sax Alto, Sax Tenor, Trompete e Trombone</li>
+                        <li><i class="fas fa-check"></i> Melodia e Cifra para Violão/Guitarra/Piano</li>
+                        <li><i class="fas fa-check"></i> Grade geral em PDF, Sibelius e XML (editável)</li>
+                        <li><i class="fas fa-check"></i> Bônus: Videoaulas de técnicas para metais</li>
                     </ul>
                     
                     <div class="featured-price">
                         <div class="price-comparison">
-                            <span class="original-price">De: R$159,60</span>
-                            <span class="discount">49,94% OFF</span>
+                            <span class="original-price">De: R$2.100,00</span>
+                            <span class="discount">87% OFF</span>
                         </div>
-                        <div class="final-price">Por: R$79,90</div>
+                        <div class="final-price">Por apenas: R$259,90</div>
                     </div>
                     
                     <a href="https://pay.kiwify.com.br/Vc2Y5Dn" class="featured-btn">
-                        <span>COMPRAR AGORA</span>
+                        <span>COMPRAR 30 ARRANJOS</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -230,54 +265,91 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- 50 Arranjos Section -->
+    <section id="50-arranjos" class="featured-combo">
         <div class="container">
-            <div class="cta-header">
-                <h2>DOMINE O PALCO COM MÚSICAS INSPIRADORAS</h2>
-                <p class="cta-subtitle">Nada impressiona mais do que um solo bem executado com técnica e atitude</p>
-            </div>
+            <h2>50 ARRANJOS COMPLETOS</h2>
+            <p class="featured-description">O pacote definitivo para seu ministério de música</p>
             
-            <div class="cta-highlight">
-                <div class="highlight-content">
-                    <h3>COMBO COMPLETO</h3>
-                    <p class="highlight-description">Todos os 4 instrumentos com <strong>58% de desconto</strong></p>
-                    
-                    <div class="price-combo">
-                        <div class="original-price-combo">
-                            <span>De: <s>R$359,10</s></span>
-                        </div>
-                        <div class="discount-badge-combo">
-                            <span>58% OFF</span>
-                        </div>
-                        <div class="final-price-combo">
-                            <span>Por apenas: R$149,90</span>
-                        </div>
-                    </div>
-                    
-                    <ul class="combo-benefits">
-                        <li><i class="fas fa-check-circle"></i> Partituras para todos os 4 instrumentos</li>
-                        <li><i class="fas fa-check-circle"></i> Playbacks em MP3 para todas as músicas</li>
-                        <li><i class="fas fa-check-circle"></i> Economize R$209,20 em relação à compra individual</li>
+            <div class="featured-instrument">
+                <img src="imagens/50-arranjos.png" alt="50 Arranjos Completos" class="featured-image">
+                <div class="featured-info">
+                    <h3>NAIPE DE METAIS COMPLETO</h3>
+                    <ul class="combo-features">
+                        <li><i class="fas fa-check"></i> 50 arranjos profissionais dos louvores mais tocados</li>
+                        <li><i class="fas fa-check"></i> Partes individuais em PDF para Sax Alto, Sax Tenor, Trompete e Trombone</li>
+                        <li><i class="fas fa-check"></i> Melodia e Cifra para Violão/Guitarra/Piano</li>
+                        <li><i class="fas fa-check"></i> Grade geral em PDF, Sibelius e XML (editável)</li>
+                        <li><i class="fas fa-check"></i> Bônus: Videoaulas de técnicas para metais</li>
+                        <li><i class="fas fa-check"></i> Bônus exclusivo: 10 arranjos especiais para quartetos</li>
                     </ul>
                     
-                    <a href="https://pay.kiwify.com.br/xdc7hOT" class="btn-combo">
-                        <span>QUERO O COMBO COMPLETO AGORA</span>
+                    <div class="featured-price">
+                        <div class="price-comparison">
+                            <span class="original-price">De: R$3.500,00</span>
+                            <span class="discount">90% OFF</span>
+                        </div>
+                        <div class="final-price">Por apenas: R$359,90</div>
+                    </div>
+                    
+                    <a href="https://pay.kiwify.com.br/Vc2Y5Dn" class="featured-btn">
+                        <span>COMPRAR 50 ARRANJOS</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                
-                <div class="highlight-image">
-                    <img src="imagens/combo-metal-2.png" alt="Combo completo de partituras">
-                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Song List -->
+    <section id="song-list" class="song-list">
+        <div class="container">
+            <h2>REPERTÓRIO SELECIONADO</h2>
+            <p class="section-subtitle">Louvores mais tocados em arranjos profissionais</p>
             
-            <div class="alternative-option">
-                <p>Ou se preferir, escolha apenas seu instrumento:</p>
-                <a href="#instruments" class="btn-alternative">
-                    <span>VER INSTRUMENTOS INDIVIDUAIS</span>
-                    <i class="fas fa-guitar"></i>
-                </a>
+            <div class="songs-grid">
+                <div class="song-column">
+                    <ul>
+                        <li><i class="fas fa-music"></i> Grande é o Senhor</li>
+                        <li><i class="fas fa-music"></i> Santo Espírito</li>
+                        <li><i class="fas fa-music"></i> Eu Me Rendo</li>
+                        <li><i class="fas fa-music"></i> O Medo Não Vai Me Parar</li>
+                        <li><i class="fas fa-music"></i> Casa de Deus</li>
+                        <li><i class="fas fa-music"></i> Nada Além do Sangue</li>
+                        <li><i class="fas fa-music"></i> Tremendo</li>
+                        <li><i class="fas fa-music"></i> Meu Abrigo</li>
+                        <li><i class="fas fa-music"></i> A Ele a Glória</li>
+                        <li><i class="fas fa-music"></i> Deus de Promessas</li>
+                    </ul>
+                </div>
+                <div class="song-column">
+                    <ul>
+                        <li><i class="fas fa-music"></i> Não Pare</li>
+                        <li><i class="fas fa-music"></i> Tua Graça Me Basta</li>
+                        <li><i class="fas fa-music"></i> Raridade</li>
+                        <li><i class="fas fa-music"></i> Algo Novo</li>
+                        <li><i class="fas fa-music"></i> Espontâneo</li>
+                        <li><i class="fas fa-music"></i> Yeshua</li>
+                        <li><i class="fas fa-music"></i> Te Adorar</li>
+                        <li><i class="fas fa-music"></i> O Nome de Jesus</li>
+                        <li><i class="fas fa-music"></i> Ninguém Explica Deus</li>
+                        <li><i class="fas fa-music"></i> Ousado Amor</li>
+                    </ul>
+                </div>
+                <div class="song-column">
+                    <ul>
+                        <li><i class="fas fa-music"></i> Me Atraiu</li>
+                        <li><i class="fas fa-music"></i> Meu Respirar</li>
+                        <li><i class="fas fa-music"></i> Nada Pode Calar</li>
+                        <li><i class="fas fa-music"></i> Tua Presença</li>
+                        <li><i class="fas fa-music"></i> O Chão Vai Tremer</li>
+                        <li><i class="fas fa-music"></i> Fogo no Altar</li>
+                        <li><i class="fas fa-music"></i> Deus Proverá</li>
+                        <li><i class="fas fa-music"></i> Ele Vem</li>
+                        <li><i class="fas fa-music"></i> Hosana</li>
+                        <li><i class="fas fa-music"></i> Nada Além de Ti</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -291,10 +363,10 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>Comprei as partituras para guitarra e foi a melhor decisão para nossa banda. O público amou quando tocamos essas músicas!</p>
+                        <p>Os arranjos são incríveis! Minha banda de metais nunca tocou tão bem. A qualidade das partituras é profissional e os arranjos são perfeitos para cultos.</p>
                         <div class="testimonial-author">
                             <img src="imagens/cliente1.jpg" alt="Cliente">
-                            <span>Carlos M.</span>
+                            <span>Carlos M. - Maestro</span>
                         </div>
                     </div>
                 </div>
@@ -302,10 +374,10 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>As partituras são muito bem elaboradas e os playbacks ajudam muito no estudo. Recomendo para todos que querem dominar o palco!</p>
+                        <p>Comprei o pacote de 50 arranjos e valeu cada centavo. Agora temos um repertório completo para todo o ano e os músicos amaram tocar essas versões.</p>
                         <div class="testimonial-author">
                             <img src="imagens/cliente2.jpg" alt="Cliente">
-                            <span>Ana P.</span>
+                            <span>Ana P. - Ministra de Música</span>
                         </div>
                     </div>
                 </div>
@@ -313,65 +385,12 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>Adquiri o combo de 3 instrumentos e valeu cada centavo. Nossa banda nunca tocou tão bem!</p>
+                        <p>Como trompetista, sempre tive dificuldade em encontrar partituras boas. Esses arranjos são perfeitos, bem escritos e com ótima harmonia entre os metais.</p>
                         <div class="testimonial-author">
                             <img src="imagens/cliente3.jpg" alt="Cliente">
-                            <span>Roberto S.</span>
+                            <span>Roberto S. - Trompetista</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Song List -->
-    <section id="song-list" class="song-list">
-        <div class="container">
-            <h2>REPERTÓRIO PESADO</h2>
-            <p class="section-subtitle">30 músicas selecionadas para destruir o palco</p>
-            
-            <div class="songs-grid">
-                <div class="song-column">
-                    <ul>
-                        <li><i class="fas fa-guitar"></i> Master of Puppets - Metallica</li>
-                        <li><i class="fas fa-guitar"></i> Iron Man - Black Sabbath</li>
-                        <li><i class="fas fa-guitar"></i> Walk - Pantera</li>
-                        <li><i class="fas fa-guitar"></i> Chop Suey! - System of a Down</li>
-                        <li><i class="fas fa-guitar"></i> Paranoid - Black Sabbath</li>
-                        <li><i class="fas fa-guitar"></i> Raining Blood - Slayer</li>
-                        <li><i class="fas fa-guitar"></i> One - Metallica</li>
-                        <li><i class="fas fa-guitar"></i> Cowboys From Hell - Pantera</li>
-                        <li><i class="fas fa-guitar"></i> Symphony of Destruction - Megadeth</li>
-                        <li><i class="fas fa-guitar"></i> Holy Wars... The Punishment Due - Megadeth</li>
-                    </ul>
-                </div>
-                <div class="song-column">
-                    <ul>
-                        <li><i class="fas fa-guitar"></i> Enter Sandman - Metallica</li>
-                        <li><i class="fas fa-guitar"></i> Angel of Death - Slayer</li>
-                        <li><i class="fas fa-guitar"></i> Toxicity - System of a Down</li>
-                        <li><i class="fas fa-guitar"></i> Ace of Spades - Motörhead</li>
-                        <li><i class="fas fa-guitar"></i> Painkiller - Judas Priest</li>
-                        <li><i class="fas fa-guitar"></i> Du Hast - Rammstein</li>
-                        <li><i class="fas fa-guitar"></i> The Trooper - Iron Maiden</li>
-                        <li><i class="fas fa-guitar"></i> Cemetery Gates - Pantera</li>
-                        <li><i class="fas fa-guitar"></i> War Pigs - Black Sabbath</li>
-                        <li><i class="fas fa-guitar"></i> Peace Sells - Megadeth</li>
-                    </ul>
-                </div>
-                <div class="song-column">
-                    <ul>
-                        <li><i class="fas fa-guitar"></i> Seek & Destroy - Metallica</li>
-                        <li><i class="fas fa-guitar"></i> Number of the Beast - Iron Maiden</li>
-                        <li><i class="fas fa-guitar"></i> South of Heaven - Slayer</li>
-                        <li><i class="fas fa-guitar"></i> Breaking the Law - Judas Priest</li>
-                        <li><i class="fas fa-guitar"></i> Fade to Black - Metallica</li>
-                        <li><i class="fas fa-guitar"></i> Run to the Hills - Iron Maiden</li>
-                        <li><i class="fas fa-guitar"></i> Symphony of Destruction - Megadeth</li>
-                        <li><i class="fas fa-guitar"></i> Crazy Train - Ozzy Osbourne</li>
-                        <li><i class="fas fa-guitar"></i> Hallowed Be Thy Name - Iron Maiden</li>
-                        <li><i class="fas fa-guitar"></i> Creeping Death - Metallica</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -383,19 +402,70 @@
             <div class="featured-description">🎁 BÔNUS INCLUSO</div>
             <div class="featured-instrument">
                 <div class="featured-image">
-                    <img src="imagens/ebook-metal.jpg" alt="Ebook Técnicas Avançadas para Metal">
+                    <img src="imagens/bonus-videoaulas.jpg" alt="Videoaulas de Técnicas para Metais">
                 </div>
                 <div class="featured-info">
-                    <h3>Ebook: Técnicas Avançadas para Metal</h3>
+                    <h3>Videoaulas: Técnicas Avançadas para Metais</h3>
                     <ul class="combo-features">
-                        <li><i>✓</i> Técnicas exclusivas para solos de metal</li>
-                        <li><i>✓</i> Métodos criativos de composição</li>
+                        <li><i>✓</i> Respiração e embocadura para metais</li>
+                        <li><i>✓</i> Técnicas de articulação e staccato</li>
+                        <li><i>✓</i> Como fazer solos criativos nos louvores</li>
                         <li><i>✓</i> Exercícios práticos para melhorar sua técnica</li>
-                        <li><i>✓</i> Bônus incluso no pacote</li>
+                        <li><i>✓</i> Bônus incluso nos pacotes completos</li>
                     </ul>
                     <div class="featured-price">
                         <div class="price-comparison">
-                            <span class="final-price">INCLUSO NO MATERIAL</span>
+                            <span class="final-price">INCLUSO NOS PACOTES DE 30 E 50 ARRANJOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-header">
+                <h2>ELEVE O NÍVEL DO SEU MINISTÉRIO DE MÚSICA</h2>
+                <p class="cta-subtitle">Com arranjos profissionais que vão impressionar toda a congregação</p>
+            </div>
+            
+            <div class="cta-highlight">
+                <div class="highlight-content">
+                    <h3>ESCOLHA SEU PACOTE IDEAL</h3>
+                    <p class="highlight-description">Economize até <strong>90%</strong> em relação ao valor de mercado</p>
+                    
+                    <div class="cta-packages">
+                        <div class="cta-package">
+                            <h4>30 ARRANJOS</h4>
+                            <div class="price-comparison">
+                                <span>De: <s>R$2.100,00</s></span>
+                            </div>
+                            <div class="final-price-combo">
+                                <span>Por apenas: R$259,90</span>
+                            </div>
+                            <a href="#30-arranjos" class="btn-package">ESCOLHER 30 ARRANJOS</a>
+                        </div>
+                        
+                        <div class="cta-package best-value">
+                            <div class="best-value-badge">MELHOR CUSTO-BENEFÍCIO</div>
+                            <h4>50 ARRANJOS</h4>
+                            <div class="price-comparison">
+                                <span>De: <s>R$3.500,00</s></span>
+                            </div>
+                            <div class="final-price-combo">
+                                <span>Por apenas: R$359,90</span>
+                            </div>
+                            <a href="#50-arranjos" class="btn-package">ESCOLHER 50 ARRANJOS</a>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Garantia de 7 Dias</h4>
+                            <p>Se você não gostar do material por qualquer motivo, devolvemos 100% do seu dinheiro sem questionamentos.</p>
                         </div>
                     </div>
                 </div>
@@ -407,17 +477,17 @@
     <footer>
         <div class="container">
             <div class="footer-logo">
-                <img src="imagens/logo-metal.png" alt="30 Músicas Metal">
+                <img src="imagens/logo-metal.png" alt="Arranjos para Metais">
             </div>
             
             <div class="footer-copyright">
-                <p>&copy; 2025 Músicas Metal - Partituras + Playbacks. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Arranjos para Metais - Partituras Profissionais. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/SEUNUMERO?text=Olá! Eu venho da página de compras das 30 partituras metal. Meu nome é:" 
+    <a href="https://wa.me/SEUNUMERO?text=Olá! Eu venho da página de compras dos arranjos para metais. Meu nome é:" 
        class="whatsapp-float" 
        target="_blank" 
        rel="noopener noreferrer">
@@ -428,7 +498,7 @@
     <div class="floating-music-btn">
         <a href="#instruments" class="btn-alternative">
             <span>ver instrumentos</span>
-            <i class="fas fa-guitar"></i>
+            <i class="fas fa-music"></i>
         </a>
     </div>
 

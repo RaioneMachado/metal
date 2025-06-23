@@ -41,7 +41,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Animation on Scroll
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.instrument-card, .testimonial-card, .featured-instrument');
+    const elements = document.querySelectorAll('.instrument-card, .testimonial-card, .featured-instrument, .package-option, .cta-package');
     
     elements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
@@ -55,7 +55,7 @@ function animateOnScroll() {
 }
 
 // Set initial state for animated elements
-document.querySelectorAll('.instrument-card, .testimonial-card, .featured-instrument').forEach(element => {
+document.querySelectorAll('.instrument-card, .testimonial-card, .featured-instrument, .package-option, .cta-package').forEach(element => {
     element.style.opacity = '0';
     element.style.transform = 'translateY(20px)';
     element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -100,7 +100,7 @@ function updateRemainingCopies() {
         let copies = 17;
         const interval = setInterval(() => {
             copies--;
-            counter.textContent = copies;
+            counter.textContent = copies + " cópias restantes";
             if (copies <= 5) {
                 counter.style.color = '#ff6b6b';
                 counter.style.fontWeight = 'bold';
@@ -114,3 +114,64 @@ function updateRemainingCopies() {
 }
 
 document.addEventListener('DOMContentLoaded', updateRemainingCopies);
+
+// Efeito de máquina de escrever para o subtítulo
+function typeWriterSubtitle() {
+    const subtitle = document.querySelector('.header-content p');
+    if (subtitle) {
+        const text = subtitle.textContent;
+        subtitle.textContent = '';
+        let i = 0;
+        const typing = setInterval(() => {
+            if (i < text.length) {
+                subtitle.textContent += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(typing);
+            }
+        }, 50);
+    }
+}
+
+// Iniciar efeitos quando a página estiver totalmente carregada
+window.addEventListener('load', function() {
+    typeWriterSubtitle();
+    
+    // Adicionar efeito de brilho nos botões principais
+    const mainButtons = document.querySelectorAll('.btn-package, .featured-btn, .btn-buy');
+    mainButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.boxShadow = `0 0 15px ${this.style.backgroundColor || '#FF6B35'}`;
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.boxShadow = '';
+        });
+    });
+    
+    // Adicionar tooltip para os ícones
+    const tooltipIcons = document.querySelectorAll('.feature-icon');
+    tooltipIcons.forEach(icon => {
+        const tooltip = document.createElement('span');
+        tooltip.className = 'tooltip-text';
+        tooltip.textContent = icon.parentElement.querySelector('.feature-text strong').textContent;
+        icon.appendChild(tooltip);
+    });
+});
+
+// Animação de pulsar para os pacotes
+function pulsePackages() {
+    const packages = document.querySelectorAll('.package-option');
+    packages.forEach((pkg, index) => {
+        setTimeout(() => {
+            pkg.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                pkg.style.transform = '';
+            }, 1000);
+        }, index * 500);
+    });
+    
+    setTimeout(pulsePackages, 3000);
+}
+
+// Iniciar animação de pulsar após 3 segundos
+setTimeout(pulsePackages, 3000);
