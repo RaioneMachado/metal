@@ -113,11 +113,7 @@ h2 {
 
 /* Header - Versão Ultra Premium Plus */
 header {
-    background: 
-        linear-gradient(135deg, 
-            rgba(16, 13, 25, 0.98) 0%, 
-            rgba(35, 25, 60, 0.95) 50%, 
-            rgba(16, 13, 25, 0.98) 100%);
+    background: #110E1B; /* Cor de fundo alterada */
     padding: 40px 0 80px;
     position: relative;
     overflow: hidden;
@@ -233,7 +229,7 @@ header::after {
     text-shadow: 
         0 5px 25px rgba(0, 0, 0, 0.9),
         0 0 20px rgba(115, 73, 229, 0.7);
-    background: linear-gradient(to right, #fff, #B9A1FF);
+    background: linear-gradient(to right, #9D42EE, #2E53DC); /* Gradiente roxo (#9D42EE) → azul (#2E53DC) */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -3018,4 +3014,131 @@ footer::before {
     .cta-packages {
         flex-direction: column;
     }
+}
+
+.competing-offers {
+  padding: 20px 10px;
+  background: linear-gradient(135deg, #1a1629 0%, #110e1b 100%);
+  border-top: 1px solid rgba(115, 73, 229, 0.3);
+  border-bottom: 1px solid rgba(115, 73, 229, 0.3);
+  overflow: hidden;
+}
+
+.offer-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cada caixa ocupa cerca de 45%, e o "OU" 10% */
+.offer-box {
+  width: 45%;
+  min-width: 140px;
+  background: rgba(25, 18, 43, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(115, 73, 229, 0.4);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5),
+              inset 0 0 10px rgba(115, 73, 229, 0.2);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.offer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  min-width: 40px;
+  position: relative;
+}
+
+.offer-divider span {
+  background: rgba(25, 18, 43, 0.9);
+  color: #B9A1FF;
+  font-weight: bold;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(115, 73, 229, 0.5);
+  box-shadow: 0 0 15px rgba(115, 73, 229, 0.3);
+  z-index: 2;
+}
+
+/* Demais estilos seguem iguais */
+.offer-box h3 {
+  color: #B9A1FF;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(115, 73, 229, 0.5);
+}
+
+.offer-content {
+  text-align: center;
+}
+
+.offer-content h4 {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.new-price {
+  color: #FFAA33;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+  text-shadow: 0 0 10px rgba(255, 170, 51, 0.4);
+}
+
+.per-item {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.checkmark {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.pulse-button {
+  background: linear-gradient(135deg, #7349E5, #8E6AFF);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(115, 73, 229, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
 }
