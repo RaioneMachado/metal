@@ -1546,8 +1546,8 @@ header::after {
 
 .instruments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
     margin-top: 40px;
     position: relative;
     z-index: 2;
@@ -1569,7 +1569,7 @@ header::after {
 }
 
 .instrument-card:hover {
-    transform: translateY(-15px) scale(1.03) rotateX(5deg);
+    transform: translateY(-10px) scale(1.03) rotateX(5deg);
     box-shadow: 
         0 25px 40px rgba(0, 0, 0, 0.8),
         0 0 25px rgba(156, 39, 176, 0.5),
@@ -1613,7 +1613,7 @@ header::after {
 }
 
 .instrument-image {
-    height: 220px;
+    height: 200px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1645,8 +1645,8 @@ header::after {
 }
 
 .instrument-card h3 {
-    padding: 20px 15px 10px;
-    font-size: 1.4rem;
+    padding: 18px 15px 8px;
+    font-size: 1.3rem;
     text-align: center;
     color: white;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -1671,27 +1671,27 @@ header::after {
 }
 
 .instrument-description {
-    padding: 0 20px 20px;
+    padding: 0 15px 15px;
     text-align: center;
     color: #ddd;
-    min-height: 60px;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    min-height: 50px;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .price-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
     position: relative;
 }
 
 .old-price {
     text-decoration: line-through;
     color: #a0a0a0;
-    font-size: 1rem;
+    font-size: 0.95rem;
     position: relative;
 }
 
@@ -1707,7 +1707,7 @@ header::after {
 }
 
 .new-price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #ffeb3b;
     text-shadow: 0 2px 5px rgba(255, 235, 59, 0.3);
@@ -1715,7 +1715,7 @@ header::after {
 }
 
 .new-price::after {
-  
+    content: 'PROMOÇÃO';
     position: absolute;
     top: -15px;
     right: -25px;
@@ -1736,13 +1736,13 @@ header::after {
 
 .btn-buy {
     display: block;
-    width: calc(100% - 40px);
-    margin: 0 auto 20px;
+    width: calc(100% - 30px);
+    margin: 0 auto 15px;
     background: linear-gradient(45deg, var(--primary-color), #7c4dff);
     color: white;
     border: none;
-    padding: 12px;
-    font-size: 1rem;
+    padding: 10px;
+    font-size: 0.95rem;
     border-radius: 6px;
     transition: all 0.3s ease;
     position: relative;
@@ -1785,15 +1785,47 @@ header::after {
     z-index: 1;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
+/* Responsivo para telas muito pequenas */
+@media (max-width: 480px) {
     .instruments-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 12px;
     }
     
-    .instrument-card:hover {
-        transform: translateY(-8px) scale(1.02);
+    .instrument-image {
+        height: 150px;
+    }
+    
+    .instrument-card h3 {
+        font-size: 1.1rem;
+        padding: 12px 10px 5px;
+    }
+    
+    .instrument-description {
+        font-size: 0.8rem;
+        padding: 0 10px 10px;
+    }
+    
+    .price-container {
+        gap: 8px;
+    }
+    
+    .old-price {
+        font-size: 0.85rem;
+    }
+    
+    .new-price {
+        font-size: 1.2rem;
+    }
+    
+    .new-price::after {
+        font-size: 0.5rem;
+        top: -12px;
+        right: -20px;
+    }
+    
+    .btn-buy {
+        font-size: 0.85rem;
+        padding: 8px;
     }
 }
 /* Featured Combo - Versão Ultra Chamativa */
