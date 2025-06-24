@@ -77,21 +77,54 @@
 
 <section>
     <div class="container">
-        <div class="hero-content-wrapper">
-            <div class="hero-text" style="text-align: center; width: 100%;">
-                <h2><span class="highlight-text">OU</span> <BR> 
-                <h2>Escolha ABAIXO um único INSTRUMENTO pela <span style="text-decoration: line-through;">metade</span> do preço</h2>
-
+        <div class="hero-content-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            
+            <!-- Primeira seta pulsante -->
+            <div class="arrow-down pulse" style="font-size: 2rem; color: red;">
+                ↓
             </div>
+            
+            <!-- Texto central -->
+            <div class="hero-text" style="text-align: center;">
+                <h2 style="margin: 0;">
+                    <span class="highlight-text">OU</span> 
+                    <br> 
+                    Escolha ABAIXO um único INSTRUMENTO pela 
+                    <span style="text-decoration: line-through;">metade</span> do preço
+                </h2>
+            </div>
+
+            <!-- Segunda seta pulsante -->
+            <div class="arrow-down pulse" style="font-size: 2rem; color: red;">
+                ↓
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- Instruments Section -->
-<section id="instruments" class="instruments-section">
-    <div class="container">
+<style>
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+}
+</style>
+
+
         <h2>ESCOLHA SEU INSTRUMENTO</h2>
-        <p class="section-subtitle">Partituras individuais por metade do preço</p>
+        <div class="subtitle-container">
+            <p class="section-subtitle">Partituras individuais por metade do preço</p>
+            <!-- Setas animadas -->
+            <div class="arrows-down">
+                <div class="arrow arrow-first"></div>
+                <div class="arrow arrow-second"></div>
+            </div>
+        </div>
 
         <!-- Arco para Sax Alto -->
         <div class="connecting-arrow">
@@ -115,7 +148,7 @@
                     <img src="imagens/sax-alto.png" alt="Sax Alto">
                 </div>
                 <h3>SAX ALTO</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">15 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -134,7 +167,7 @@
                     <img src="imagens/sax-alto.png" alt="Sax Alto">
                 </div>
                 <h3>SAX ALTO</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">50 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -173,7 +206,7 @@
                     <img src="imagens/sax-tenor.png" alt="Sax Tenor">
                 </div>
                 <h3>SAX TENOR</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">15 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -192,7 +225,7 @@
                     <img src="imagens/sax-tenor.png" alt="Sax Tenor">
                 </div>
                 <h3>SAX TENOR</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">50 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -231,7 +264,7 @@
                     <img src="imagens/trompete.png" alt="Trompete">
                 </div>
                 <h3>TROMPETE</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">15 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -250,7 +283,7 @@
                     <img src="imagens/trompete.png" alt="Trompete">
                 </div>
                 <h3>TROMPETE</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">50 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -289,7 +322,7 @@
                     <img src="imagens/trombone.png" alt="Trombone">
                 </div>
                 <h3>TROMBONE</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">15 arranjos</span></strong></h3> 
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -308,7 +341,7 @@
                     <img src="imagens/trombone.png" alt="Trombone">
                 </div>
                 <h3>TROMBONE</h3>
-                <p class="instrument-description">
+                
                     <h3><strong><span style="color: yellow;">50 arranjos</span></strong></h3>  
                     <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
                 </p>
@@ -338,47 +371,47 @@
                 <polygon points="450,120 440,110 440,130" fill="#B9A1FF"/>
             </svg>
         </div>
-
-        <div class="instruments-grid">
-            <!-- Melodia e Cifra 1 (15 arranjos) -->
-            <div class="instrument-card" data-instrument="melodia">
-                <div class="instrument-image">
-                    <img src="imagens/partitura.png" alt="Melodia e Cifra">
-                </div>
-                <h3>MELODIA & CIFRA</h3>
-                <p class="instrument-description">
-                    <h3><strong><span style="color: yellow;">15 arranjos</span></strong></h3> 
-                    <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
-                </p>
-                <div class="price-container">
-                    <span class="old-price">R$129,90</span>
-                    <span class="new-price">R$64,90</span>
-                </div>
-                <a href="https://pay.kiwify.com.br/LXMGVus" target="_blank">
-                    <button class="btn-buy">COMPRAR AGORA</button>
-                </a>
-            </div>
-
-            <!-- Melodia e Cifra 2 (50 arranjos) -->
-            <div class="instrument-card" data-instrument="melodia">
-                <div class="instrument-image">
-                    <img src="imagens/partitura.png" alt="Melodia e Cifra">
-                </div>
-                <h3>MELODIA & CIFRA</h3>
-                <p class="instrument-description">
-                    <h3><strong><span style="color: yellow;">50 arranjos</span></strong></h3> 
-                    <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
-                </p>
-                <div class="price-container">
-                    <span class="old-price">R$129,90</span>
-                    <span class="new-price">R$64,90</span>
-                </div>
-                <a href="https://pay.kiwify.com.br/LXMGVus" target="_blank">
-                    <button class="btn-buy">COMPRAR AGORA</button>
-                </a>
-            </div>
+<div class="instruments-grid">
+    <!-- Melodia e Cifra 1 (15 arranjos) -->
+    <div class="instrument-card" data-instrument="melodia">
+        <div class="instrument-image">
+            <img src="imagens/partitura.png" alt="Melodia e Cifra">
         </div>
+        <h3>MELODIA & CIFRA</h3>
+        <div class="instrument-description">
+            <p class="instrument-types">(teclado, guitarra, violão ...)</p>
+            <h3><strong><span style="color: yellow;">15 arranjos</span></strong></h3> 
+            <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
+        </div>
+        <div class="price-container">
+            <span class="old-price">R$129,90</span>
+            <span class="new-price">R$64,90</span>
+        </div>
+        <a href="https://pay.kiwify.com.br/LXMGVus" target="_blank">
+            <button class="btn-buy">COMPRAR AGORA</button>
+        </a>
     </div>
+
+    <!-- Melodia e Cifra 2 (50 arranjos) -->
+    <div class="instrument-card" data-instrument="melodia">
+        <div class="instrument-image">
+            <img src="imagens/partitura.png" alt="Melodia e Cifra">
+        </div>
+        <h3>MELODIA & CIFRA</h3>
+        <div class="instrument-description">
+            <p class="instrument-types">(teclado, guitarra, violão ...)</p>
+            <h3><strong><span style="color: yellow;">50 arranjos</span></strong></h3> 
+            <img src="imagens/pdf-metal.png" alt="" class="inline-icon">
+        </div>
+        <div class="price-container">
+            <span class="old-price">R$129,90</span>
+            <span class="new-price">R$64,90</span>
+        </div>
+        <a href="https://pay.kiwify.com.br/LXMGVus" target="_blank">
+            <button class="btn-buy">COMPRAR AGORA</button>
+        </a>
+    </div>
+</div>
 </section>
 
 <!-- 30 Arranjos Section -->

@@ -3168,3 +3168,27 @@ footer::before {
     margin-top: -10px;
   }
 }
+.instrument-description {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.instrument-types {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Estilos adicionais para manter consistência */
+.instrument-card {
+    text-align: center;
+    padding: 20px;
+    /* outros estilos do card */
+}
+
+.instrument-image img {
+    max-width: 100%;
+    height: auto;
+}
