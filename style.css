@@ -215,80 +215,82 @@ header::after {
 
 /* Header Content */
 .header-content {
-    text-align: center;
-    margin-top: 50px;
-    position: relative;
-    z-index: 2;
-    padding: 0 20px;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
 }
 
 .header-content h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    margin-bottom: 25px;
-    color: white;
-    text-shadow: 
-        0 5px 25px rgba(0, 0, 0, 0.9),
-        0 0 20px rgba(115, 73, 229, 0.7);
-    background: linear-gradient(to right, #ac7fd3, #2E53DC); /* Gradiente roxo (#9D42EE) → azul (#2E53DC) */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-    display: inline-block;
-    letter-spacing: -1.5px;
-    line-height: 1.2;
-    font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: white; /* cor padrão branca (fallback) */
 }
 
-.header-content h1::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 5px;
-    background: linear-gradient(to right, #8E6AFF, #8E6AFF);
-    border-radius: 5px;
-    box-shadow: 0 0 25px rgba(115, 73, 229, 0.9);
+/* Primeira linha com gradiente */
+.header-content h1 .first-line {
+  display: inline-block;
+  background: linear-gradient(to right, #ac7fd3, #2E53DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow:
+    0 5px 25px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(115, 73, 229, 0.7);
+}
+
+/* Segunda linha branca */
+.header-content h1 .second-line {
+  display: inline-block;
+  color: #ffffff;
+  text-shadow:
+    0 5px 25px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .header-content p {
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
-    margin-bottom: 40px;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    line-height: 1.6;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  line-height: 1.6;
 }
 
 .header-content p::before,
 .header-content p::after {
-    content: '✦';
-    position: absolute;
-    color: #B9A1FF;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    opacity: 0;
-    transition: all 0.5s ease;
-    text-shadow: 0 0 15px rgba(115, 73, 229, 0.8);
+  content: '✦';
+  position: absolute;
+  color: #B9A1FF;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.5s ease;
+  text-shadow: 0 0 15px rgba(115, 73, 229, 0.8);
 }
 
 .header-content p::before {
-    left: -40px;
+  left: -40px;
 }
 
 .header-content p::after {
-    right: -40px;
+  right: -40px;
 }
 
 .header-content:hover p::before,
 .header-content:hover p::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Countdown Container */
@@ -413,8 +415,6 @@ header::after {
     transform: scaleX(1);
     transform-origin: left;
 }
-
-
 
 @keyframes laser-animation {
     0% {
@@ -2947,7 +2947,7 @@ footer::before {
   width: 100%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(115, 73, 229, 0.5);
-  animation: pulse 2s infinite;
+  animation: pulse 0,10s infinite;
 }
 
 @keyframes pulse {
