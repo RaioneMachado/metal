@@ -175,3 +175,16 @@ function pulsePackages() {
 
 // Iniciar animação de pulsar após 3 segundos
 setTimeout(pulsePackages, 3000);
+
+document.querySelector('.cta-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('sax-alto').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+    
+    // Adiciona destaque
+    const card = document.getElementById('sax-alto');
+    card.classList.add('highlight');
+    setTimeout(() => card.classList.remove('highlight'), 2000);
+});
