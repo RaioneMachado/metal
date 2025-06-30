@@ -1778,6 +1778,26 @@ header::after {
         padding: 8px;
     }
 }
+
+
+.instrument-card.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* Ajustes para o terceiro card */
+.instrument-card.centered-card {
+    grid-column: 1 / -1;
+    max-width: 500px; /* Largura máxima para desktop */
+    margin: 0 auto; /* Centraliza o card */
+}
+
+/* Em telas pequenas, ocupa a largura total */
+@media (max-width: 768px) {
+    .instrument-card.centered-card {
+        max-width: 100%;
+    }
+}
 /* Featured Combo - Versão Ultra Chamativa */
 .featured-combo {
     background-color: #100D19;
@@ -3179,3 +3199,4 @@ footer::before {
   line-height: 1;
   font-weight: 900;
 }
+
