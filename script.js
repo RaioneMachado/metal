@@ -188,12 +188,3 @@ document.querySelector('.cta-button').addEventListener('click', function(e) {
     card.classList.add('highlight');
     setTimeout(() => card.classList.remove('highlight'), 2000);
 });
-
-// Simula o número de pessoas online variando entre 10 e 35
-function atualizarClientes() {
-    const qtd = Math.floor(Math.random() * 25) + 10;
-    document.getElementById("qtd-clientes").textContent = qtd;
-}
-
-setInterval(atualizarClientes, 5000);
-atualizarClientes();
