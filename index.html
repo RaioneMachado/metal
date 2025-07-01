@@ -250,20 +250,20 @@
       <br>
       <br>
 
-      <!-- Arco para Sax Tenor -->
-      <div class="connecting-arrow">
-          <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-              <path d="M50,120 Q250,-50 450,120" 
-                    fill="transparent" 
-                    stroke="#B9A1FF" 
-                    stroke-width="3"
-                    stroke-dasharray="0" />
-              <!-- Ponta da seta esquerda -->
-              <polygon points="50,120 60,110 60,130" fill="#B9A1FF"/>
-              <!-- Ponta da seta direita -->
-              <polygon points="450,120 440,110 440,130" fill="#B9A1FF"/>
-          </svg>
-      </div>
+<!-- Arco para Sax Tenor -->
+<div id="sax-tenor" class="connecting-arrow">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+    <path d="M50,120 Q250,-50 450,120" 
+          fill="transparent" 
+          stroke="#B9A1FF" 
+          stroke-width="3"
+          stroke-dasharray="0" />
+    <!-- Ponta da seta esquerda -->
+    <polygon points="50,120 60,110 60,130" fill="#B9A1FF"/>
+    <polygon points="450,120 440,110 440,130" fill="#B9A1FF"/>
+  </svg>
+</div>
+
 
       <div class="instruments-grid">
           <!-- sax tenor 1 (15 arranjos) -->
@@ -573,15 +573,14 @@
 
 
 
-    <!-- Song List -->
-    <section id="song-list" class="song-list">
-    <div class="container">
-        <h2>REPERTÓRIO SELECIONADO</h2>
-        <p class="section-subtitle">Louvores mais tocados em arranjos profissionais</p>
-        
-        <div class="songs-grid">
-            <div class="song-column">
-                <ul>
+<!-- Song List -->
+<section id="song-list" class="song-list">
+  <div class="container">
+    <h2>REPERTÓRIO SELECIONADO</h2>
+    <p class="section-subtitle">Louvores mais tocados em arranjos profissionais</p>
+    <div class="songs-grid">
+      <div class="song-column">
+        <ul>
                     <li><i class="fas fa-music"></i> 1000 Graus - Renascer Praise</li>
                     <li><i class="fas fa-music"></i> A Benção - Gabriel Guedes e Nívea Soares</li>
                     <li><i class="fas fa-music"></i> A Face Adorada (304 HC)</li>
@@ -813,13 +812,23 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
-    <!-- Botão Flutuante da Lista de Músicas -->
-    <div class="floating-music-btn">
-        <a href="#song-list" class="btn-alternative">
-            <span>ver músicas</span>
-            <i class="fas fa-music"></i>
-        </a>
-    </div>
+<!-- Botão Flutuante da Lista de Músicas -->
+<div class="floating-music-btn">
+  <a href="#sax-tenor" class="btn-alternative scroll-to-target">
+    <span>ver instrumentos</span>
+    <i class="fas fa-music"></i>
+  </a>
+</div>
+
+<!-- Botão Flutuante para Ver Lista -->
+<div class="floating-songlist-btn">
+  <a href="#song-list" class="btn-alternative scroll-to-target">
+    <span>Ver Lista</span>
+    <i class="fas fa-list"></i>
+  </a>
+</div>
+
+
 
     <script src="script.js"></script>
 </body>

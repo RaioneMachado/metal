@@ -3259,3 +3259,25 @@ footer::before {
 .whatsapp-button:hover {
     background-color: #1ebe5b;
 }
+.floating-songlist-btn {
+  position: fixed;
+  bottom: 150px; /* Antes era 120px — agora subiu bem mais */
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-songlist-btn .btn-alternative {
+  background: #B9A1FF;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.floating-songlist-btn .btn-alternative:hover {
+  background: #9b80f0;
+}
