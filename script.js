@@ -191,19 +191,4 @@ document.querySelector('.cta-button').addEventListener('click', function(e) {
 
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const btns = document.querySelectorAll(".scroll-to-target");
-    btns.forEach(btn => {
-      btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({
-            behavior: "smooth"
-          });
-        }
-      });
-    });
-  });
-</script>
+
